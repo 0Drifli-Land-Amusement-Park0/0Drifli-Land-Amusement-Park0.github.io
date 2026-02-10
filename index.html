@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <title>Drifli Land Amusement Park</title>
+    <style>
+        body { background: #0f0c29; color: white; font-family: sans-serif; text-align: center; padding-top: 50px; }
+        .box { border: 2px solid #00d2ff; padding: 30px; border-radius: 20px; display: inline-block; background: rgba(0,0,0,0.3); }
+        h1 { color: #00d2ff; }
+        #iu { color: #ccc; font-style: italic; margin-bottom: 20px; }
+        #soojin { color: #ff007a; font-weight: bold; font-size: 1.5em; }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <h1>Drifli Land 🎡</h1>
+        <p id="iu">Loading system...</p>
+        <p id="soojin"></p>
+    </div>
+
+    <script>
+        const lang = navigator.language || navigator.userLanguage;
+        const iu = document.getElementById('iu');
+        const soojin = document.getElementById('soojin');
+
+        if (lang.includes('ko')) {
+            iu.innerText = "IU: 시스템 준비 완료. 드리플리 랜드에 오신 것을 환영합니다.";
+            soojin.innerText = "Soo-Jin: 와! 우리 같이 놀자!";
+        } else if (lang.includes('ar')) {
+            iu.innerText = "IU: النظام جاهز. أهلاً بك في دريفلي لاند.";
+            soojin.innerText = "سو-جين: يااااي! لنلعب معاً!";
+        } else {
+            iu.innerText = "IU: System ready. Welcome to Drifli Land.";
+            soojin.innerText = "Soo-Jin: Yay! Let's play together!";
+        }
+    </script>
+</body>
+</html>
